@@ -1,0 +1,24 @@
+---
+
+version: '3'
+services:
+  db:
+    image: postgres
+
+  production:
+    build:
+      context: .
+
+  development:
+    build:
+      context: .
+    volumes:
+      - .:/project
+
+  test:
+    build:
+      context: .
+    volumes:
+      - .:/project
+    depends_on:
+      - db

@@ -1,0 +1,14 @@
+parameters:
+  checkMissingIterableValueType: false
+  ignoreErrors:
+    - '#Variable property access on object#'
+
+  excludes_analyse:
+    - code/vendor
+    - code/routes/console.php
+    - code/routes/channels.php
+    - code/tests/Unit/ExampleTest.php
+    - code/app/Http/Middleware/Authenticate.php
+    - code/app/Exceptions/Handler.php
+    - code/app/Providers
+    - code/database
